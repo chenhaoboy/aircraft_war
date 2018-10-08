@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>PlaneWars</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/planewars.css"/>
+	<body>
+		<div class="main" id="main">
+			<ul class="options">
+				<li level="1">简单模式</li>
+				<li level="2">困难模式</li>
+				<li level="3">勇士模式</li>
+				<li level="4">地狱模式</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/bmob-min.js"></script>
+	<script type="text/javascript" src="js/GameEngine.js"></script>
+	<script type="text/javascript" src="js/PlaneWars.js"></script>
+	<script type="text/javascript" src="js/Bullet.js"></script>
+	<script type="text/javascript" src="js/Enemy.js"></script>
+	<script type="text/javascript" src="js/Prop.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			Bmob.initialize("6c5235c6edbf3301a767be5c1d0f88ee", "d9086081185943d59c109dffc65b1393");
+			new GameEngine().start();
+		}
+		let __instance = (function(){
+			let instance;
+			return (newInstance) => {
+				if (newInstance) instance = newInstance;
+				return instance;
+			}
+		}());
+		let _instance = (function(){
+			let instance;
+			return (newInstance) => {
+				if (newInstance) instance = newInstance;
+				return instance;
+			}
+		}());
+	</script>
+</html>
